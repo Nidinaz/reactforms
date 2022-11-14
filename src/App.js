@@ -11,16 +11,18 @@ function App() {
     confirm_password: ''
   }
 
+  //props - name, placeholder, value
+
   return (
     <div className='register-form'>
       <div>
         <input type={'email'} name="email" placeholder='Email' value={registerationForm.email}></input>
       </div>
       <div>
-        <input type={'password'} name="password" placeholder='Password'></input>
+        <input type={'password'} name="password" placeholder='Password' value={registerationForm.password}></input>
       </div>
       <div>
-        <input type={'password'} name="confirm_password" placeholder='Confirm Password'></input>
+        <input type={'password'} name="confirm_password" placeholder='Confirm Password' value={registerationForm.confirm_password}></input>
       </div>
       <div>
         <button>Submit</button>
