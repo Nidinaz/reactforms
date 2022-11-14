@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [user, setUser] = useState()
+
+
+  const registerationForm = {
+    email: 'Dori@gmail.com',
+    password: '',
+    confirm_password: ''
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='register-form'>
+      <div>
+        <input type={'email'} name="email" placeholder='Email' value={registerationForm.email}></input>
+      </div>
+      <div>
+        <input type={'password'} name="password" placeholder='Password'></input>
+      </div>
+      <div>
+        <input type={'password'} name="confirm_password" placeholder='Confirm Password'></input>
+      </div>
+      <div>
+        <button>Submit</button>
+      </div>
     </div>
   );
 }
